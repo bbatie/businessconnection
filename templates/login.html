@@ -1,0 +1,28 @@
+<ion-view title="Login" id="page4">
+  <ion-content padding="true" class="has-header">
+    <a ui-sref="businesses()" id="login-button13" class="button button-positive button-block">Find A Business</a>
+    <form id="login-form1" class="list">
+      <div class="spacer" style="width: 300px; height: 83px;"></div>
+      <ion-list id="login-list2">
+        <ion-item class="item-divider" id="login-list-item-divider1"> Business Login</ion-item>
+        <label class="item item-input" id="login-input1">
+          <span class="input-label">ID</span>
+          <input type="text" placeholder="" ng-model="mainUser.id">
+        </label>
+        <label class="item item-input" id="login-input3">
+          <span class="input-label">Email</span>
+          <input type="text" placeholder="" ng-model="mainUser.email">
+        </label>
+        <label class="item item-input" id="login-input2">
+          <span class="input-label">Password</span>
+          <input type="text" placeholder="" ng-model="mainUser.password">
+        </label>
+      </ion-list>
+      <div class="spacer" style="height: 40px;"></div>
+      <ion-checkbox id="login-checkbox1" ng-model="saveInfo.checkbox">Save Info</ion-checkbox>
+      <button id="login-button1" ng-click="login()" class="button button-stable button-block">Log in</button>
+      <a ui-sref="signUp()" id="login-button2" class="button button-positive button-block button-clear">Or create an account</a>
+    </form>
+    <a href-inappbrowser="https://www.paypal.com/donate/?hosted_button_id=8EHDHNYXXYBH6" id="login-button11" class="button button-positive button-block">Donate (keep it free)</a>
+  </ion-content>
+</ion-view>

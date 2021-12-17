@@ -1,0 +1,38 @@
+<ion-view title="Home" id="page1">
+  <ion-content padding="true" class="has-header">
+    <a href-inappbrowser="https://www.paypal.com/donate/?hosted_button_id=8EHDHNYXXYBH6" id="home-button12" class="button button-positive button-block">Donate (keep it free)</a>
+    <div>
+      <p style="align:center"></p>
+      <center>
+        25 Latest Businesses
+        <b>
+          <br> search to find more
+        </b>
+        <p></p>
+      </center>
+    </div>
+    <label class="item item-input myItem" style="width: 100%;color:black">
+      <input type="text" placeholder="Search" ng-model="mySearch.customerSearch" style="color: black;">
+      <a ng-if="mySearch.customerSearch != ''" on-touch="mySearch.customerSearch =''">
+        <i class="icon ion-ios-close dark placeholder-icon"></i>
+      </a>
+    </label>
+    <button id="home-button3" ng-click="addNew()" class="button button-positive button-block">Add New</button>
+    <div class="list card" id="home-card21" ng-repeat="business in allbusinesses | filter:mySearch.customerSearch | limitTo : 25">
+      <ion-item class="item-thumbnail-left" id="home-list-item7">
+        <h2>{{business.businessname}}</h2>
+      </ion-item>
+      <p>
+        {{business.contactname}}
+      </p>
+      <div id="home-button-bar1" class="button-bar">
+        <button id="home-button7" class="button button-positive button-block">Call</button>
+        <button id="home-button8" class="button button-positive button-block">Email</button>
+        <button id="home-button9" class="button button-positive button-block">Website</button>
+      </div>
+      <p>
+        {{business.description}}
+      </p>
+    </div>
+  </ion-content>
+</ion-view>
